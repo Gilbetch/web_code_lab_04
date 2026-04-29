@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Javascript</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var name;
+            var type;
+            var water;
+            var electric;
+            water = "";
+            electric = "";
+            for (var i = 1; i <= 3; i++) {
+                var name = prompt("enter name : ");
+                var type = prompt("enter type : ");
+                if (type == "water"){
+                    water = water +" "+ name;
+                }
+                if (type == "electric"){
+                    electric = electric +" "+ name +",";
+                }
+                
+            }
+            console.log("list of electric : " + electric);
+            console.log("list of water : " + water);
+        </script>
+    </body>
+</html>

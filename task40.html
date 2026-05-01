@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TASK 39</title>
+        <button id = "2222">GANTI QUOTES</button>
+        <h1 id = "1111">Delivering good software today is often better than perfect software tomorrow, so finish things and ship.</h1>
+    </head>
+    <body>
+        <script>
+            var warna = [];
+            warna [0] = 'Delivering good software today is often better than perfect software tomorrow, so finish things and ship.';
+            warna [1] = 'Programmer: A machine that turns coffee into code.';    
+            warna [2] = 'Computers are fast; programmers keep it slow.';
+            warna [3] = 'So if you want to go fast, if you want to get done quickly, if you want your code to be easy to write, make it easy to read.';
+            warna [4] = 'Truth can only be found in one place: the code.';
+            warna [5] = 'First, solve the problem. Then, write the code.';
+            warna [6] = 'Good code is its own best documentation.';
+            warna [7] = 'Confusion is part of programming.';
+            warna [8] = 'Programming is learned by writing programs.';
+            warna [9] = 'Being a developer is not about writing code, it’s about solving problems.';
+            var tombol = document.getElementById('2222');
+            tombol.onclick = function(){
+                
+                    var acak = Math.floor(Math.random() * 10);
+                    document.getElementById('1111').innerHTML = warna[acak];
+                }
+            
+        </script>
+    </body>
+</html>

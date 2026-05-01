@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TASK 39</title>
+        <button id = "2222">ganti warna background</button>
+    </head>
+    <body>
+        <script>
+            var warna = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+            var tombol = document.getElementById('2222');
+            tombol.onclick = function(){
+                var pagar = '#';
+                for (var i = 0; i < 6; i++){
+                    var acak = Math.floor(Math.random() * 16);
+                    pagar += warna[acak];
+                }
+                document.body.style.backgroundColor = pagar;
+            }
+        </script>
+    </body>
+</html>

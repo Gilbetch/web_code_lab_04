@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TASK 41</title>
+        <button id = "2222">Dark Theme</button>
+        <h1 id = "1111">Delivering good software today is often better than perfect software tomorrow, so finish things and ship.</h1>
+    </head>
+    <body>
+        <script>
+            var tombol = document.getElementById('2222');
+            var keadaan = true;
+            tombol.onclick = function(){
+                if (keadaan == true){
+                    keadaan = false;
+                    document.body.style.backgroundColor = 'white';
+                    document.body.style.color = 'black';
+                } else {
+                    keadaan = true;
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white';
+
+                }
+            }
+            
+        </script>
+    </body>
+</html>

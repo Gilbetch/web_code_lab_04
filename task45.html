@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TASK 42</title>
+      
+       
+    </head>
+    <body>
+          <img id="foto1" src="fototask45/1.png" alt="">
+          <img id="foto2" src="fototask45/3.png" alt="">
+          <h1 id="operator">efdf</h2>
+          <input id="lname" type="text">
+          <p><button id = "login" onclick="enter()">enter</button></p>
+          <p id = "captcha"></p>
+        <script>
+            var foto1 = document.getElementById('foto1');
+            var foto2 = document.getElementById('foto2');
+            var foto_Angka = ["fototask45/0.png", "fototask45/1.png", "fototask45/2.png", "fototask45/3.png", "fototask45/4.png", "fototask45/5.png", "fototask45/6.png", "fototask45/7.png", "fototask45/8.png", "fototask45/9.png"];
+            var angka_Array = ["0","1","2","3","4","5","6","7","8","9"];
+            var angka1 = Math.floor(Math.random() * 10);
+            var angka2 = Math.floor(Math.random() * 10);
+            var input = document.getElementById('lname').value;
+            document.getElementById.foto1.src = foto_Angka[angka1];
+            document.getElementById.foto2.src = foto_Angka[angka2];
+            var operator = Math.floor(Math.random() * 2);
+            if (operator == 0){
+                document.getElementById('operator').innerText = "+";
+            } else {
+                document.getElementById('operator').innerText = "-";
+            }
+
+
+        </script>
+    </body>
+</html>

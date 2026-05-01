@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Javascript</title>
+    </head>
+    <body>
+        <button id="maju">MAJU</button>
+        <button id="mundur">MUNDUR</button>
+        <img id="foto" src="1.jpg" alt="foto error" height="400px">
+
+        <script type="text/javascript">
+            var foto = document.getElementById('foto');
+            var maju = document.getElementById('maju');
+            var mundur = document.getElementById('mundur');
+            var stok_foto = ['fototask43/1.jpg', 'fototask43/2.jpg', 'fototask43/3.jpg', 'fototask43/4.jpg', 'fototask43/5.jpeg'];
+            var counter = 0;
+            maju.onclick = function() {
+                counter++;
+                if (counter > stok_foto.length - 1) {
+                    counter = 0;
+                }
+                foto.src = stok_foto[counter];
+            }
+            mundur.onclick = function() {
+                counter--;
+                if (counter < 0) {
+                    counter = stok_foto.length - 1;
+                }
+                foto.src = stok_foto[counter];
+            }
+        </script>
+    </body>
+</html>

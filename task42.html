@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TASK 42</title>
+      
+       
+    </head>
+    <body>
+          <h2 id="waktu">00:00:00</h2>
+        <script>
+            var waktu = document.getElementById('waktu');
+            function updateTime() {
+                var sekarang = new Date();
+                waktu.innerText = sekarang.getHours() + ':' + sekarang.getMinutes() + ':' + sekarang.getSeconds();
+            }
+            setInterval(updateTime,1000);
+        </script>
+    </body>
+</html>

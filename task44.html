@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TASK 42</title>
+      
+       
+    </head>
+    <body>
+          <h2 id="stopwatch">0</h2>
+          <button id = "start">Start</button>
+          <button id = "stop">Stop</button>
+          <button id = "reset">Reset</button>
+        <script>
+            var stopwatch = document.getElementById('stopwatch');
+            var counter = 0;
+            var status = 0;
+            var interval;
+            
+            function updateStopwatch() {
+                counter++;
+                stopwatch.innerText = counter;
+            }
+            counter = 0;
+var start = document.getElementById('start');
+var stop = document.getElementById('stop');
+var reset = document.getElementById('reset');
+
+start.onclick = function() {
+    interval = setInterval(updateStopwatch, 1000);
+    status = 1;
+}
+stop.onclick = function(){
+    clearInterval(interval);
+    counter = counter;
+    stopwatch.innterText = counter;
+    status = 0; 
+    
+}
+reset.onclick = function(){
+    if (status == 1){
+        counter = 0;
+        stopwatch.innerText = counter;
+    }
+    else{
+        counter = 0;
+        stopwatch.innerText = counter;
+
+    }
+    
+}
+        </script>
+    </body>
+</html>

@@ -8,12 +8,12 @@
        
     </head>
     <body>
-          <img id="foto1" src="fototask45/1.png" alt="">
-          <img id="foto2" src="fototask45/3.png" alt="">
-          <h1 id="operator">efdf</h2>
+          <img id="foto1" src="" alt="">
+          <img id="foto2" src="" alt="">
+          <h1 id="operator"></h2>
           <input id="lname" type="text">
-          <p><button id = "login" onclick="enter()">enter</button></p>
-          <p id = "captcha"></p>
+          <button id="login">LOGIN</button>
+          <h2 id = "captcha"></h2>
         <script>
             var foto1 = document.getElementById('foto1');
             var foto2 = document.getElementById('foto2');
@@ -22,13 +22,27 @@
             var angka1 = Math.floor(Math.random() * 10);
             var angka2 = Math.floor(Math.random() * 10);
             var input = document.getElementById('lname').value;
-            document.getElementById.foto1.src = foto_Angka[angka1];
-            document.getElementById.foto2.src = foto_Angka[angka2];
+            var soperator;
+            var login = document.getElementById('login');
+            foto1.src = foto_Angka[angka1];
+            foto2.src = foto_Angka[angka2];
             var operator = Math.floor(Math.random() * 2);
             if (operator == 0){
                 document.getElementById('operator').innerText = "+";
+                soperator = "+";
             } else {
                 document.getElementById('operator').innerText = "-";
+                soperator = "-";
+            }
+            var jawaban = angka_Array[angka1] + angka_Array[angka2] + soperator;
+
+            login.onclick = function() {
+                var input = document.getElementById('lname').value;
+                if (input == jawaban){
+                    document.getElementById('captcha').innerText = "Captcha benar!";
+                } else {
+                    document.getElementById('captcha').innerText = "Captcha salah!";
+                }
             }
 
 
